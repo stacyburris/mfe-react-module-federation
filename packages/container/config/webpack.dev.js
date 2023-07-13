@@ -1,5 +1,4 @@
 const { merge } = require('webpack-merge'); // merge allows us to merge two webpack config files together
-const HtmlWebpackPlugin = require('html-webpack-plugin'); // this plugin will generate an html file for us and inject our bundled js file into it
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const commonConfig = require('./webpack.common');
 const packageJson = require('../package.json');
@@ -19,9 +18,6 @@ const devConfig = {
         marketing: 'marketing@http://localhost:8081/remoteEntry.js',
       },
       shared: packageJson.dependencies, // this lets us share all of the dependencies in the package.json file
-    }),
-    new HtmlWebpackPlugin({
-      template: './public/index.html', // tells the plugin where our html file is located
     }),
   ],
 };

@@ -1,3 +1,6 @@
+
+const HtmlWebpackPlugin = require('html-webpack-plugin'); // this plugin will generate an html file for us and inject our bundled js file into it
+
 module.exports = {
   module: {
     rules: [
@@ -21,4 +24,9 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './public/index.html', // tells the plugin where our html file is located
+    }),
+  ]
 };
