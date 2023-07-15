@@ -1,3 +1,4 @@
 # Container
 
-S3 AWS_DEFAULT_REGION: us-west-2
+![common errors with mfe apps](../assets/common-error.png)
+publicPath: '/container/latest/', // this tells webpack where to put the bundled file when we run the build command
