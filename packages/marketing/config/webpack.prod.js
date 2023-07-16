@@ -7,6 +7,7 @@ const prodConfig = {
   mode: 'production', // this tells webpack to use its production optimizations, like minifying our code, etc.
   output: {
     filename: '[name].[contenthash].js', // this tells webpack to use a unique name for our bundled js file
+    publicPath: '/marketing/latest/', // this tells webpack where to put the bundled file when we run the build command
   },
   plugins: [
     new ModuleFederationPlugin({
