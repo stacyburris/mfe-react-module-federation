@@ -1,4 +1,4 @@
-# AWS Setup and Configuration Cheetsheet
+# AWS Setup and Configuration Cheatsheet
 
 ## S3 Bucket Creation and Configuration
 
