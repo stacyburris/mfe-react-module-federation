@@ -4,6 +4,7 @@ const commonConfig = require('./webpack.common');
 const packageJson = require('../package.json');
 
 const devConfig = {
+  devtool: 'eval-source-map',
   mode: 'development',
   output: {
     publicPath: 'http://localhost:8080/', // this tells webpack where to put the bundled file when we run the build command
