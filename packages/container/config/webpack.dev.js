@@ -5,10 +5,13 @@ const packageJson = require('../package.json');
 
 const devConfig = {
   mode: 'development',
+  output: {
+    publicPath: 'http://localhost:8080/', // this tells webpack where to put the bundled file when we run the build command
+  },
   devServer: {
     port: 8080,
     historyApiFallback: {
-      index: 'index.html',
+      index: '/index.html',
     },
   },
   plugins: [
@@ -16,6 +19,7 @@ const devConfig = {
       name: 'container', // this name is used by the container to reference this module
       remotes: {
         marketing: 'marketing@http://localhost:8081/remoteEntry.js',
+        auth: 'auth@http://localhost:8082/remoteEntry.js',
       },
       shared: packageJson.dependencies, // this lets us share all of the dependencies in the package.json file
     }),

@@ -6,10 +6,13 @@ const packageJson = require('../package.json');
 
 const devConfig = {
   mode: 'development',
+  output: {
+    publicPath: 'http://localhost:8081/', // this tells webpack where to put the bundled file when we run the build command
+  },
   devServer: {
     port: 8081,
     historyApiFallback: {
-      index: 'index.html',
+      index: '/index.html',
     },
   },
   plugins: [
