@@ -20,3 +20,5 @@ S3 bucket: `mfe-mf-dashboard`
 AWS CLI has a run command to create an invalidation for us on a specific file:
 
 `- run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }} --paths "/container/latest/index.html"`
+
+- https://d15nom3h2ehevv.cloudfront.net/
