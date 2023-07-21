@@ -1,4 +1,4 @@
-import { mount } from "dashbaord/DashboardApp";
+import { mount } from "dashboard/DashboardApp";
 import React, { useRef, useEffect } from "react"; // useRef allows us to get a reference to an html element,
 
 export default () => {
